@@ -6,6 +6,6 @@ class Solution:
             if num in seen:
                 return True
                 
-            seen.add(num)
+            seen.add(num) 
 
         return False
