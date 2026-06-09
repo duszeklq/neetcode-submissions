@@ -1,11 +1,16 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
-        for j in range(len(nums) - 1):
-            for i in range(j, len(nums) - 1):
-                if nums[j] + nums[i + 1] == target: 
-                     return [j, i + 1]
+        seen = {}
+
+        for i, num in enumerate(nums):
+            complement = target - num
+    
+            if complement not in seen:
+                seen[num] = i 
+            else:
+                return [seen[complement], i]
             
-#Brute force method, solves the problem but slowly. There is a faster way.
-#Time complexity: O(n^2)
-#Space complexity: O(1)
+# Optimal solution
+# Time Complexity: O(n)
+# Space Complexity: O(n)

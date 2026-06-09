@@ -6,4 +6,6 @@ class Solution:
                 if nums[j] + nums[i + 1] == target: 
                      return [j, i + 1]
             
-#Brute force method, solves the problem but slowly, there is a faster way
+# Brute force method
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
